@@ -7,8 +7,8 @@ var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
 var redis = require("redis");
-
-server.listen(3001);
+port = process.env.PORT || 3001
+server.listen(port);
 
 // simple logger
 app.use(function(req, res, next){
