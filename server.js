@@ -12,6 +12,7 @@ server.listen(port);
 
 // simple logger
 app.use(function(req, res, next){
+  res.setHeader('Access-Control-Allow-Origin','http://evening-depths-8726.herokuapp.com/');
   console.log('%s %s', req.method, req.url);
   next();
 });
